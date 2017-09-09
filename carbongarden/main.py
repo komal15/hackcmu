@@ -89,9 +89,16 @@ class WelcomeHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/welcome.html')
         self.response.out.write(template.render(my_vars))
 
+class QuestionHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/questions.html')
+        self.response.out.write(template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/welcome', WelcomeHandler),
     ('/profile', ProfileHandler),
+    ('/questions', QuestionHandler),
+
 ], debug=True)
