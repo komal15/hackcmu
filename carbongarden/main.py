@@ -13,6 +13,7 @@ class Profile(ndb.Model):
     hometown = ndb.StringProperty()
     email = ndb.StringProperty()
     score = ndb.IntegerProperty()
+    #image = ndb.StringProperty()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -89,6 +90,8 @@ class QuestionHandler(webapp2.RequestHandler):
         template_vars = {
         'score' : score,
         }
+
+
         template = jinja_environment.get_template('templates/questions.html')
         self.response.out.write(template.render())
 
@@ -113,7 +116,8 @@ class GardenHandler(webapp2.RequestHandler):
 
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
-        profiles = Profile.query().fetch()
+        profiles = Profile.query().order(-Profile.score).fetch()
+
 
         template_vars = {
             'profiles': profiles,
