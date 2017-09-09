@@ -2,7 +2,7 @@
 <html>
   <head>
     <title> {{current_user}}</title>
-    <link href="stylesheets/hackcmustyle.css" rel="stylesheet">
+    <link href="../stylesheets/hackcmustyle.css" rel="stylesheet">
   </head>
 
   <header>
@@ -13,10 +13,10 @@
   <body>
     <!-- <h3>Name: {{current_user}}</h3> -->
     <form action="/profile" method="post">
-      <h3>Name: </h3>
+      <h3>Name </h3>
       <input type="text" name="name" placeholder="Call me..." >
-      <h3>Hometown: </h3>
-      <textarea  placeholder="Where are you from?" name="blurb" rows="8" cols="80"></textarea><br><br>
+      <h3>Hometown </h3>
+      <textarea  placeholder="Where are you from?" name="hometown" rows="8" cols="80"></textarea><br><br>
       <input type="submit" >
     </form>
   </body>
