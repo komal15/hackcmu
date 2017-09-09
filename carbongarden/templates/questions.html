@@ -44,10 +44,10 @@
         <input type="checkbox" name="meal" id="Organic" value="Organic" /><label for="Organic">Organic</label><br />
         <input type="checkbox" name="meal" id="Reduced packaged meat consumption" value="Reduced packaged meat consumption" /><label for="Reduced packaged meat consumption">Reduced packaged meat consumption</label><br />
     </fieldset>
-      <button type="button" id= "submit" onclick= "this.disabled='disabled'" >Submit</button>
+      <button type="button" id= "submit" method="post">Submit</button>
       <p id="score" class="questions"> Score:  </p>
 
-
+<h3> My total score: {{profile.score}} <h3>
       <!-- after pressing submit button, we can use JS to show the results of
       your number with a message like "Good job! You helped you garden grow
       today. or Keep working at it! With more efforts to reduce you carbon

@@ -82,18 +82,30 @@ class WelcomeHandler(webapp2.RequestHandler):
 class QuestionHandler(webapp2.RequestHandler):
     def get(self):
         current_user = users.get_current_user()
-        #p2 = k.get()
-        current_user.score = 9 #SOSOSOSOOSOS
-        score = current_user.score
+        profile = Profile.query().filter(Profile.email == current_user.email()).get()
+        #current_user.score = 9 #SOSOSOSOOSOS
+        score = profile.score
         #current_user.put()
 
         template_vars = {
         'score' : score,
+        'profile': profile,
         }
 
 
         template = jinja_environment.get_template('templates/questions.html')
-        self.response.out.write(template.render())
+        self.response.out.write(template.render(template_vars))
+
+    def post(self):
+        current_user = users.get_current_user()
+        profile = Profile.query().filter(Profile.email == current_user.email()).get()
+        val = 7 #js.check()
+        profile.score += val
+        profile.put()
+
+
+
+        self.redirect('/')
 
 class MyProfileHandler(webapp2.RequestHandler):
     def get(self):
@@ -105,7 +117,6 @@ class MyProfileHandler(webapp2.RequestHandler):
             'profile': profile,
             'logout_url':logout_url,
         }
-
         template = jinja_environment.get_template('templates/myprofile.html')
         self.response.write(template.render(template_vars))
 
@@ -118,7 +129,7 @@ class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
         profiles = Profile.query().order(-Profile.score).fetch(5)
 
-        #friend_profile = 
+        #friend_profile =
 
         template_vars = {
             'profiles': profiles,
