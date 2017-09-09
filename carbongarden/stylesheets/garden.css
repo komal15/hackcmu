@@ -8,3 +8,199 @@
     margin: 0;
     padding: 0;
 }
+
+
+.questions, .leaderboard{
+	font-size: 1em;
+	font-family: Copperplate, cursive;
+	color: #0e7f28;
+	text-align: left;
+	background-color: #ffbcf4;
+	opacity: 0.9;
+}
+
+a, a:visited{
+	text-decoration:none;
+}
+
+#getin{
+}
+
+.button1 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:13.25%;
+		min-width: 80px;
+		margin-top:.25%;
+		margin-bottom: 1%;
+		margin-left:.5%;
+		margin-right:.1%;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button1:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button2 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:13.25%;
+		min-width: 80px;
+		margin-top:.25%;
+		margin-bottom:1%;
+		margin-right:.1%;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button3 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:13.25%;
+		min-width:80px;
+		margin-top:.25%;
+		margin-bottom:1%;
+		margin-right:.1%;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button3:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button4 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:13.25%;
+		min-width:80px;
+		margin-top:.25%;
+		margin-bottom:1%;
+		margin-right:.1%;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button4:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button5 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:13.25%;
+		min-width:80px;
+		margin-top:.25%;
+		margin-bottom:1%;
+		margin-right:.1%;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button5:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button6 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:13.25%;
+		min-width:80px;
+		margin-top:.25%;
+		margin-bottom:1%;
+		margin-right:.5%;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button6:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button7 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:10%;
+		min-width:80px;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button7:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.button8 {
+    background-color: #e7e7e7; /* Gray */
+    border: none;
+    color: green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		width:10%;
+		min-width:80px;
+    font-size: 14px;
+		font-family: Copperplate, cursive;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button8:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
