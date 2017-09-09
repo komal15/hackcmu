@@ -14,14 +14,21 @@
     <a href="/myprofile" class = "button4">My Profile</a>
     <a href="/leaderboard" class="button5">Leaderboard</a>
     <a href="{{logout_url}}" id="getout" class ="button6">Log Out</a>
-  <h1> <center>My Profile</center> </h1>
+  <h1 style = "font-size:4em"> <center>My Profile</center> </h1>
   <style>
   h3 { text-indent: 20px; }
   </style>
+<<<<<<< HEAD
 <h3> Name: {{profile.name}}</h3>
 <h3> Email: {{profile.email}}</h3>
 <h3> Hometown: {{profile.hometown}}</h3>
 <h3 id="pts"> Total points: {{profile.score}} </h2>
+=======
+<h3 style="font-size:2em"> Name: {{profile.name}}</h3>
+<h3 style="font-size:2em"> Email: {{profile.email}}</h3>
+<h3 style="font-size:2em"> Hometown: {{profile.hometown}}</h3>
+<h3 style="font-size:2em" id="pts"> Total points: {{profile.score}} </h2>
+>>>>>>> 631e2a604ae452bbcf9aaf808c3d47b309c01ebd
 <br>
   <a href="/customize" class="buttoncust">Customize</a>
  <input type="button" onClick="history.go(0)" value="Refresh"
