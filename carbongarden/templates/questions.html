@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script>
 <html>
   <head>
     <meta charset="utf-8">
@@ -12,7 +13,7 @@
     <fieldset>
         <legend> <b>How did you get around today?</b></legend>
         <input type="checkbox" name="transportation" id="Carpool" value="Carpool" /><label for="Carpool">Carpool</label><br />
-        <input type="checkbox" name="transportation" id="Public Transit" value="Transit"  /><label for="Public Transit">Public Transit</label><br />
+        <input type="checkbox" name="transportation" id="Public Transit" value="Public Transit"  /><label for="Public Transit">Public Transit</label><br />
         <input type="checkbox" name="transportation" id="Walk" value="Walk" /><label for="Walk">Walk</label><br />
         <input type="checkbox" name="transportation" id="Bike" value="Bike" /><label for="Bike">Bike</label><br />
     </fieldset>
@@ -20,23 +21,74 @@
         <legend><b>How did you contribute at home?</b></legend>
         <input type="checkbox" name="home" id="Turned off all lights" value="Turned off all lights" /><label for="Turned off all lights">Turned off all lights</label><br />
         <input type="checkbox" name="home" id="Turned off faucet" value="Turned off faucet"  /><label for="Turned off faucet">Turned off faucet</label><br />
-        <input type="checkbox" name="home" id="Did a full load of laundry" value="Did a full load of laundry" /><label for="Did a full load of laundry">Did a fulle load of laundry</label><br />
-        <input type="checkbox" name="home" id="Thermostat reads: 68 in the winter or 75 in the summer" value="Thermostat reads: 68 in the winter or 75 in the summer" /><label for="Thermostat reads: 68 in the winter or 75 in the summer">Thermostat reads: 68 in the winter or 75 in the summer</label><br />
+        <input type="checkbox" name="home" id="Did a full load of laundry" value="Did a full load of laundry" /><label for="Did a full load of laundry">Did a full load of laundry</label><br />
+        <input type="checkbox" name="home" id="Thermostat reads 68 in the winter or 75 in the summer" value="Thermostat reads 68 in the winter or 75 in the summer" /><label for="Thermostat reads 68 in the winter or 75 in the summer">Thermostat reads 68 in the winter or 75 in the summer</label><br />
     </fieldset>
     <fieldset>
         <legend><b>What about your resources?</b></legend>
-        <input type="checkbox" name="resources" id="Use a reusable water bottle" value="Use a reusable water bottle" /><label for="Use a reusable water bottle">Use a reusable water bottle</label><br />
+        <input type="checkbox" name="resources" id="Used a reusable water bottle" value="Used a reusable water bottle" /><label for="Used a reusable water bottle">Used a reusable water bottle</label><br />
         <input type="number" name="resources" id="" value="Recyled bottle/cans"  /><label for="Recyled bottle/cans">Recyled bottle/cans</label><br />
-        <input type="checkbox" name="resources" id="Compost" value="Compost" /><label for="Compost">Compost</label><br />
+        <input type="checkbox" name="resources" id="Composted" value="Composted" /><label for="Composted">Composted</label><br />
         <input type="checkbox" name="resources" id="Recycled paper" value="Recycled paper" /><label for="Recycled paper">Recycled paper</label><br />
     </fieldset>
     <fieldset>
         <legend><b>How did you eat?</b></legend>
-        <input type="checkbox" name="meal" id="Choose local food products" value="Choose local food products" /><label for="Choose local food products">Choose local food products</label><br />
-        <input type="checkbox" name="meal" id="Use your own dishes" value="Use your own dishes"  /><label for="Use your own dishes">Use your own dishes</label><br />
+        <input type="checkbox" name="meal" id="Chose local food products" value="Chose local food products" /><label for="Chose local food products">Chose local food products</label><br />
+        <input type="checkbox" name="meal" id="Used your own dishes" value="Used your own dishes"  /><label for="Used your own dishes">Used your own dishes</label><br />
         <input type="checkbox" name="meal" id="Organic" value="Organic" /><label for="Organic">Organic</label><br />
-        <input type="checkbox" name="meal" id="Reduce packaged meat consumption" value="Reduce packaged meat consumption" /><label for="Reduce packaged meat consumption">Reduce packaged meat consumption</label><br />
+        <input type="checkbox" name="meal" id="Reduced packaged meat consumption" value="Reduced packaged meat consumption" /><label for="Reduced packaged meat consumption">Reduced packaged meat consumption</label><br />
     </fieldset>
+      <input type="submit" value="Submit">
   </div>
   </body>
+  function check() {
+    points=0;
+    if( document.getElementById("Carpool").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Public Transit").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Walk").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Bike").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Turned off all lights").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Turned off faucet").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Did a full load of laundry").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Thermostat reads 68 in the winter or 75 in the summer").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Used a reusable water bottle").checked == true){
+      points+=1;
+    }
+    points+=document.getElementById("Recycled bottles/cans").value;
+    if( document.getElementById("Composted").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Recycled paper").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Chose local food products").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Used your own dishes").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Organic").checked == true){
+      points+=1;
+    }
+    if( document.getElementById("Reduced packaged meat consumption").checked == true){
+      points+=1;
+    }
+    return points
+  }
 </html>

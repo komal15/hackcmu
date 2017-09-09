@@ -5,9 +5,13 @@
     <link href="../stylesheets/hackcmustyle.css" rel="stylesheet">
     <title> Homepage </title>
   </head>
+
+{% if current_user %}
+
   <body>
     <div class = "questions">
     <body style="margin:20px;padding:10px">
+<<<<<<< HEAD
     <button type="button" onclick="window.location.href='/questions'"
     >Questions</button>
     <button type="button" onclick="window.location.href='/mygarden'"
@@ -18,6 +22,10 @@
     >Leaderboard</button>
     <h1> <center> Welcome to Carbon Garden! </center> </h1>
     <h2> <center> Hello, {{ name}}! Thank you for logging in. Your participation in
+=======
+    <u><h1> <center> Welcome to Carbon Garden! </center> </h1></u>
+    <h2> <center> Hello, {{profile.name}}! Thank you for logging in. Your participation in
+>>>>>>> 2ed01b9076ac7530f00596484b2fa5c17ad6c492
     this game helps us achieve our goal of reducing the carbon footprint
     that will be left by our generation. </center> </h2>
     <h3> <center> The 'Questions' tab will allow you to answer your daily questions and
@@ -27,6 +35,22 @@
     'Leaderboard' tab compares the number of green points you have to your
     friends. <br> Happy reducing, reusing, and recycling! </br> </center> </h3>
   </div>
+
+   <a id="getout" href="{{logout_url}}"> Log Out </a>
   </body>
+
+{% else %}
+
+  <body>
+  <div class = "scr1">
+  <h1 class = "title"> Carbon <img src = "../images/foot.png" style="height:0.6em"> Garden </h1>
+  </div>
+
+  <div>
+    <a id="getin" type="button" href="{{login_url}}"> Log In </a>
+  </div>
+  </body>
+{% endif %}
+
 </head>
 </html>
