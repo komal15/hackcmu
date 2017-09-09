@@ -83,13 +83,20 @@ class QuestionHandler(webapp2.RequestHandler):
     def get(self):
         current_user = users.get_current_user()
         profile = Profile.query().filter(Profile.email == current_user.email()).get()
+
+        current_email = current_user.email()
+
         #current_user.score = 9 #SOSOSOSOOSOS
         score = profile.score
         #current_user.put()
 
+        #profile.score = 7
+        #profile.put()
+
         template_vars = {
         'score' : score,
         'profile': profile,
+        'current_email':current_email,
         }
 
 
@@ -97,14 +104,21 @@ class QuestionHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(template_vars))
 
     def post(self):
-        print("works")
         current_user = users.get_current_user()
+        current_email = current_user.email()
         profile = Profile.query().filter(Profile.email == current_user.email()).get()
-        val = 7 #js.check()
-        profile.score += val
+         #js.check()
+        profile.score = 5
         profile.put()
 
+        template_vars = {
+            'profile': profile,
+            'current_email':current_email,
+        }
 
+
+        template = jinja_environment.get_template('templates/questions.html')
+        self.response.out.write(template.render(template_vars))
 
         self.redirect('/')
 
@@ -113,6 +127,7 @@ class MyProfileHandler(webapp2.RequestHandler):
         current_user = users.get_current_user()
         logout_url = users.create_logout_url('/')
         profile = Profile.query().filter(Profile.email == current_user.email()).get()
+
 
         template_vars = {
             'profile': profile,
