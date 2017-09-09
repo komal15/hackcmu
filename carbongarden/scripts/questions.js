@@ -56,3 +56,8 @@ document.getElementById("submit").onclick=function() {
 var score= check();
 console.log(score);
 document.getElementById("score").innerHTML= "Score: "  + score.toString();}
+
+if(document.getElementById("submit"))
+
+
+Read more: http://javarevisited.blogspot.com/2013/02/disable-submit-button-in-html-javascript-avoid-multiple-form-submission.html#ixzz4sCdnfZ3s
