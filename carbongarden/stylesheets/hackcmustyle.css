@@ -49,10 +49,12 @@ a, a:visited{
     text-decoration: none;
     display: inline-block;
 		width:12%;
-		min-width: 100px;
-		margin-left:10%;
+		min-width: 90px;
+		margin-left:11%;
+		margin-top:.5%
 		margin-bottom:1%;
     font-size: 14px;
+		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -70,9 +72,11 @@ a, a:visited{
     text-decoration: none;
     display: inline-block;
 		width:12%;
-		min-width: 100px;
+		min-width: 90px;
+		margin-top:.5%
 		margin-bottom:1%;
     font-size: 14px;
+		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -90,9 +94,11 @@ a, a:visited{
     text-decoration: none;
     display: inline-block;
 		width:12%;
-		min-width:100px;
+		min-width:90px;
+		margin-top:.5%
 		margin-bottom:1%;
     font-size: 14px;
+		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -110,9 +116,11 @@ a, a:visited{
     text-decoration: none;
     display: inline-block;
 		width:12%;
-		min-width:100px;
+		min-width:90px;
+		margin-top:.5%;
 		margin-bottom:1%;
     font-size: 14px;
+		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -130,10 +138,12 @@ a, a:visited{
     text-decoration: none;
     display: inline-block;
 		width:12%;
-		min-width:100px;
+		min-width:90px;
+		margin-top:1%;
 		margin-right:10%;
-		margin-bottom:1%;
+		margin-bottom:.5%;
     font-size: 14px;
+		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
