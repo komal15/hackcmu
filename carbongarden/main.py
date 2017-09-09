@@ -48,7 +48,7 @@ class MainHandler(webapp2.RequestHandler):
         "logout_url": logout_url,
         }
 
-        template = jinja_environment.get_template('templates/welcome.html')
+        template = jinja_environment.get_template('templates/login.html')
         self.response.out.write(template.render(template_vars))
 
     def post(self):
