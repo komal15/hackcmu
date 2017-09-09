@@ -1,6 +1,6 @@
+
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var totalpts = 100;
 var increm = 5;
 var cols = ["#C489FF","#7ABAF9","#DB7474","#E570E5","#FC9328","#8686F9","#F7C42A","#FC80BE" ];
 var fillcols = ["rgb(229, 204, 255)","rgb(153, 204, 255)","rgb(255, 153, 153)","rgb(255, 153, 255)","rgb(255, 179, 102)","rgb(153, 153, 255)","rgb(255, 217, 102)", "rgb(255, 153, 204)"]
@@ -18,7 +18,8 @@ ctx.canvas.width  = width;
 
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
-  var totalpts = 100;
+  var totalpts = localStorage.getItem("score");
+  console.log(totalpts);
   var increm = 5;
   var cols = ["#7ABAF9","#C489FF","#DB7474","#E570E5","#FC80BE","#8686F9","#F7C42A", "#FC9328"];
   var fillcols = ["rgb(153, 204, 255)","rgb(229, 204, 255)","rgb(255, 153, 153)","rgb(255, 153, 255)","rgb(255, 153, 204)","rgb(153, 153, 255)","rgb(255, 217, 102)", "rgb(255, 179, 102)"]
@@ -35,17 +36,36 @@ ctx.canvas.width  = width;
 
 
   function grow(currentX, col, fillcol, currentY){
-  function drawFlower(){
+  function drawFlower(ang){
 
   ctx.strokeStyle=col;
   ctx.lineWidth=1;
   ctx.fillStyle=fillcol;
   ctx.beginPath();
-  ctx.ellipse(currentX,currentY, 0.01*width, 0.04*width,  Math.PI, 0, 2 * Math.PI);
-  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  Math.PI/5, 0, 2 * Math.PI)
-  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  2 * Math.PI/5, 0, 2 * Math.PI)
-  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  3 * Math.PI/5, 0, 2 * Math.PI)
-  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  4 * Math.PI/5, 0, 2 * Math.PI)
+  ctx.ellipse(currentX,currentY, 0.01*width, 0.04*width,  Math.PI/5, ang, ang + 2 * Math.PI);
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  Math.PI/5, ang, ang + 2 * Math.PI)
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  2 * Math.PI/5, ang, ang + 2 * Math.PI)
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  3 * Math.PI/5, ang, ang + 2 * Math.PI)
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  4 * Math.PI/5, ang, ang + 2 * Math.PI)
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(currentX,currentY,0.01*width,0,2*Math.PI);
+  ctx.fillStyle=col;
+  ctx.fill();
+
+  }
+  function drawFlower(ang){
+
+  ctx.strokeStyle=col;
+  ctx.lineWidth=1;
+  ctx.fillStyle=fillcol;
+  ctx.beginPath();
+  ctx.ellipse(currentX,currentY, 0.01*width, 0.04*width,  Math.PI, 0,2 * Math.PI);
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  Math.PI/5, 0,  2 * Math.PI)
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  2 * Math.PI/5, 0,  2 * Math.PI)
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  3 * Math.PI/5, 0,  2 * Math.PI)
+  ctx.ellipse(currentX,currentY,  0.01*width,  0.04*width,  4 * Math.PI/5, 0,  2 * Math.PI)
   ctx.fill();
   ctx.stroke();
   ctx.beginPath();
@@ -79,7 +99,7 @@ ctx.canvas.width  = width;
 
     }
 
-    drawFlower();
+
     ctx.beginPath();
         ctx.strokeStyle="#0B8E3F";
       ctx.moveTo(currentX,currentY + 0.25*height);
@@ -93,11 +113,24 @@ ctx.canvas.width  = width;
       ctx.fillStyle="#0B8E3F";
       ctx.fill();
   }
+  var alpha = 0;
+  var angle = Math.PI/5;
+  function fadeIn(){
+if(alpha<1){
+  alpha += 0.001;
+  angle += Math.PI/5;
+ctx.globalAlpha=alpha;
+drawFlower(angle);
+ requestAnimationFrame(fadeIn);
+}
+}
   animate();
+  fadeIn();
+
   }
 
   function garden(){
-    for(var i=1;i<9;i++){
+    for(var i=1;i<=totalpts;i++){
       if(i%2==0){
   grow(0.10*width *i ,cols[i-1],fillcols[i-1], 0.60 *height);
   }

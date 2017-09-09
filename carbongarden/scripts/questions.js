@@ -52,7 +52,10 @@ function check() {
   }
   return points;
 }
+if(document.getElementById("submit")!=null){
 document.getElementById("submit").onclick=function() {
 var score= check();
+localStorage.setItem("score",score);
 console.log(score);
 document.getElementById("score").innerHTML= "Score: "  + score.toString();}
+}
