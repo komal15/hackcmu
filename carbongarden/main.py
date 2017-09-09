@@ -138,8 +138,15 @@ class MyProfileHandler(webapp2.RequestHandler):
 
 class GardenHandler(webapp2.RequestHandler):
     def get(self):
+        current_user = users.get_current_user()
+        profile = Profile.query().filter(Profile.email == current_user.email()).get()
+         #js.check()
+        profile.score += 1
+        profile.put()
+
         template = jinja_environment.get_template('templates/garden.html')
         self.response.out.write(template.render())
+
 
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
