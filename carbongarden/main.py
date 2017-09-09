@@ -154,6 +154,29 @@ class LeaderboardHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/leaderboard.html')
         self.response.out.write(template.render(template_vars))
 
+class CustomizeHandler(webapp2.RequestHandler):
+    def get(self):
+        current_user = users.get_current_user()
+        profile = Profile.query().filter(Profile.email == current_user.email()).get()
+
+
+        template_vars = {
+            'profile': profile,
+        }
+
+        template = jinja_environment.get_template('templates/customize.html')
+        self.response.out.write(template.render(template_vars))
+
+    def post(self):
+        current_user = users.get_current_user()
+        profile = Profile.query().filter(Profile.email == current_user.email()).get()
+        name = self.request.get('name')
+        profile.name = name
+        hometown = self.request.get('hometown')
+        profile.hometown = hometown
+        profile.put()
+        self.redirect('/myprofile')
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
@@ -163,5 +186,6 @@ app = webapp2.WSGIApplication([
     ('/myprofile', MyProfileHandler),
     ('/mygarden', GardenHandler),
     ('/leaderboard', LeaderboardHandler),
+    ('/customize', CustomizeHandler)
 
 ], debug=True)

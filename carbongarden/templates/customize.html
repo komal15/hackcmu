@@ -14,17 +14,22 @@
     <a href="/myprofile" class = "button4">My Profile</a>
     <a href="/leaderboard" class="button5">Leaderboard</a>
     <a href="{{logout_url}}" id="getout" class ="button6">Log Out</a>
-  <h1> <center>My Profile</center> </h1>
+  <h1> <center>Customize</center> </h1>
   <style>
   h3 { text-indent: 20px; }
+  h2 { text-indent: 20px; }
   </style>
-<h3> Name: {{profile.name}}</h3>
-<h3> Email: {{profile.email}}</h3>
-<h3> Hometown: {{profile.hometown}}</h3>
-<h3> Total points: {{profile.score}} </h2>
+  <form action="/customize" method="post">
+<h3> Change Name: <input type="text" name="name" placeholder="New Name"
+  style=margin-left:1%></h3>
+<h3> Change Hometown: <input type="text" name="hometown"
+  placeholder="New Hometown" style=margin-left:1%></h3>
 <br>
-<a href="/customize" class="buttoncust">Customize</a>
+  <input type="submit" method="post" href="/myprofile" class="buttonsub">
 <br>
+</form>
+<br>
+
 </div>
 
   </body>
