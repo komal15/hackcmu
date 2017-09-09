@@ -6,34 +6,34 @@
     <title> Leaderboard </title>
   </head>
   <body>
-    <body style="margin:20px;padding:20px">
+    <body style="margin:10px;padding:10px">
     <div class= "leaderboard">
       <a href="/" class = "button1">Home</a>
       <a href="/questions" class = "button2">Questions</a>
       <a href="/mygarden" class = "button3" >My Garden</a>
       <a href="/myprofile" class = "button4">My Profile</a>
       <a href="/leaderboard" class="button5">Leaderboard</a>
-      <a href="{{logout_url}}" id="getout" class ="button6">Log Out</a> 
+      <a href="{{logout_url}}" id="getout" class ="button6">Log Out</a>
 <h1> <center> How much is everyone else helping the environment? </center>
 </h1> <br>
 
 <h2> <center> Worldwide Leaderboard </center> </h2>
-<table style="margin:0px auto">
+<table style="margin:0px auto" cellspacing=1 cellpadding=3>
   <colgroup>
-    <col span="3" style="background-color:white">
+    <col span="3" style="background-color:white;padding:1px">
 
   </colgroup>
 
   <tr>
-    <th>User</th>
-    <th>Score</th>
-    <th>Location</th>
+    <th><center>User</center></th>
+    <th><center>Score</center></th>
+    <th><center>Location</center></th>
   </tr>
 
     {% for profile in profiles %}
   <tr>
-    <td>{{profile.email}}</td>
-    <td>{{profile.score}}</td>
+    <td>{{profile.name}}</td>
+    <td><center>{{profile.score}}</center></td>
     <td>{{profile.hometown}}</td>
   </tr>
 
