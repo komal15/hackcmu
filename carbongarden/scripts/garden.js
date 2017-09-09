@@ -16,7 +16,7 @@ ctx.canvas.width  = width;
 
 
 
-function grow(currentX, col, fillcol, currentY){
+function grow(currentX, col, fillcol){
 function drawFlower(){
 
 ctx.strokeStyle=col;
