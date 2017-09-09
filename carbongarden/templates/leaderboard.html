@@ -6,7 +6,33 @@
     <title> Leaderboard </title>
   </head>
   <body>
-<h1 class= "leaderboard"> How much is everyone else helping the environment? </h1>
+    <body style="margin:20px;padding:20px">
+    <div class= "leaderboard">
+<h1> How much is everyone else helping the environment? </h1> <br> <br>
+
+<h2> Worldwide Leaderboard </h2>
+<table>
+  <colgroup>
+    <col span="2" style="background-color:white">
+
+  </colgroup>
+
+  <tr>
+    <th>User</th>
+    <th>Score</th>
+  </tr>
+
+    {% for profile in profiles %}
+  <tr>
+    <td>{{profile.email}}</td>
+    <td>{{profile.score}}</td>
+  </tr>
+
+  {% endfor %}
+</table>
+
+
+</div>
 
 
   </body>

@@ -12,6 +12,7 @@ class Profile(ndb.Model):
     name = ndb.StringProperty()
     hometown = ndb.StringProperty()
     email = ndb.StringProperty()
+    score = ndb.IntegerProperty()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -64,7 +65,8 @@ class ProfileHandler(webapp2.RequestHandler):
         email= user.email()
         name = self.request.get('name')
         hometown = self.request.get('hometown')
-        profile = Profile(name=name,hometown=hometown,email=email)
+        score = 0
+        profile = Profile(name=name,hometown=hometown,email=email, score=score)
         profile.put()
         self.redirect('/')
 
@@ -76,6 +78,15 @@ class WelcomeHandler(webapp2.RequestHandler):
 
 class QuestionHandler(webapp2.RequestHandler):
     def get(self):
+        current_user = users.get_current_user()
+        #p2 = k.get()
+        current_user.score = 9 #SOSOSOSOOSOS
+        score = current_user.score
+        #current_user.put()
+
+        template_vars = {
+        'score' : score,
+        }
         template = jinja_environment.get_template('templates/questions.html')
         self.response.out.write(template.render())
 
@@ -100,8 +111,14 @@ class GardenHandler(webapp2.RequestHandler):
 
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
+        profiles = Profile.query().fetch()
+
+        template_vars = {
+            'profiles': profiles,
+        }
+
         template = jinja_environment.get_template('templates/leaderboard.html')
-        self.response.out.write(template.render())
+        self.response.out.write(template.render(template_vars))
 
 
 app = webapp2.WSGIApplication([
