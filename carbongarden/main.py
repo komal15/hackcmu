@@ -48,7 +48,7 @@ class MainHandler(webapp2.RequestHandler):
         "logout_url": logout_url,
         }
 
-        template = jinja_environment.get_template('templates/login.html')
+        template = jinja_environment.get_template('templates/welcome.html')
         self.response.out.write(template.render(template_vars))
 
     def post(self):
@@ -79,7 +79,7 @@ class ProfileHandler(webapp2.RequestHandler):
         email= user.email()
         name = self.request.get('name')
         hometown = self.request.get('hometown')
-        profile = Profile(name=name,blurb=blurb,email=email)
+        profile = Profile(name=name,hometown=hometown,email=email)
         profile.put()
         self.redirect('/')
 
