@@ -28,7 +28,7 @@ function check() {
     points+=1;
   }
 
-  if( document.getElementById("Recycled all bottles and cans").check == true){
+  if( document.getElementById("Recycled all bottles and cans").checked == true){
     points+=1;
   }
 
@@ -57,8 +57,3 @@ document.getElementById("submit").onclick=function() {
 var score= check();
 console.log(score);
 document.getElementById("score").innerHTML= "Score: "  + score.toString();}
-
-
-
-
-Read more: http://javarevisited.blogspot.com/2013/02/disable-submit-button-in-html-javascript-avoid-multiple-form-submission.html#ixzz4sCdnfZ3s
