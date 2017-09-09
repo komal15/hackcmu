@@ -33,7 +33,6 @@
     <fieldset>
         <legend><b>What about your resources?</b></legend>
         <input type="checkbox" name="resources" id="Used a reusable water bottle" value="Used a reusable water bottle" /><label for="Used a reusable water bottle">Used a reusable water bottle</label><br />
-        <!--<input type="number" name="resources" id="Recycled bottle/cans" value="Recyled bottle/cans"  /><label for="Recyled bottle/cans">Recyled bottle/cans</label><br />-->
         <input type="checkbox" name="resources" id="Composted" value="Composted" /><label for="Composted">Composted</label><br />
         <input type="checkbox" name="resources" id="Recycled paper" value="Recycled paper" /><label for="Recycled paper">Recycled paper</label><br />
     </fieldset>
@@ -53,63 +52,6 @@
       today. or Keep working at it! With more efforts to reduce you carbon
       footprint, the more your garden will grow"  -->
   </div>
-<script>
-  function check() {
-    points=0;
-    if( document.getElementById("Carpool").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Public Transit").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Walk").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Bike").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Turned off all lights").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Turned off faucet").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Did a full load of laundry").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Thermostat reads 68 in the winter or 75 in the summer").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Used a reusable water bottle").checked == true){
-      points+=1;
-    }
-
-    //points+=document.getElementById("Recycled bottles/cans").value;
-
-    if( document.getElementById("Composted").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Recycled paper").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Chose local food products").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Used your own dishes").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Organic").checked == true){
-      points+=1;
-    }
-    if( document.getElementById("Reduced packaged meat consumption").checked == true){
-      points+=1;
-    }
-    return points;
-  }
-  document.getElementById("submit").onclick=function() {
-  var score= check();
-  console.log(score);
-document.getElementById("score").innerHTML= "Score: "  + score.toString();}
-</script>
+<script src="../scripts/questions.js"></script>
 </body>
 </html>
