@@ -34,7 +34,7 @@
     <fieldset>
         <legend><b>What about your resources?</b></legend>
         <input type="checkbox" name="resources" id="Used a reusable water bottle" value="Used a reusable water bottle" /><label for="Used a reusable water bottle">Used a reusable water bottle</label><br />
-        <input type="number" name="resources" id="" value="Recyled bottle/cans"  /><label for="Recyled bottle/cans">Recyled bottle/cans</label><br />
+        <input type="number" name="resources" id="Recycled bottle/cans" value="Recyled bottle/cans"  /><label for="Recyled bottle/cans">Recyled bottle/cans</label><br />
         <input type="checkbox" name="resources" id="Composted" value="Composted" /><label for="Composted">Composted</label><br />
         <input type="checkbox" name="resources" id="Recycled paper" value="Recycled paper" /><label for="Recycled paper">Recycled paper</label><br />
     </fieldset>
@@ -45,7 +45,9 @@
         <input type="checkbox" name="meal" id="Organic" value="Organic" /><label for="Organic">Organic</label><br />
         <input type="checkbox" name="meal" id="Reduced packaged meat consumption" value="Reduced packaged meat consumption" /><label for="Reduced packaged meat consumption">Reduced packaged meat consumption</label><br />
     </fieldset>
-      <input type="submit" value="Submit">
+      <input id= "score" type="submit" value="Submit">
+      <p id="score" class="questions"> Score:  </p>
+
 
       <!-- after pressing submit button, we can use JS to show the results of
       your number with a message like "Good job! You helped you garden grow
@@ -53,7 +55,6 @@
       footprint, the more your garden will grow"  -->
 
   </div>
-  </body>
 <script>
   function check() {
     points=0;
@@ -84,7 +85,9 @@
     if( document.getElementById("Used a reusable water bottle").checked == true){
       points+=1;
     }
+
     points+=document.getElementById("Recycled bottles/cans").value;
+
     if( document.getElementById("Composted").checked == true){
       points+=1;
     }
@@ -103,6 +106,11 @@
     if( document.getElementById("Reduced packaged meat consumption").checked == true){
       points+=1;
     }
-    return points
   }
+  if( document.getElementById("score").clicked){
+  check();
+  console.log(points)
+document.getElementById("score").innerHTML= "score: "  + points.toString();}
+</script>
+</body>
 </html>
