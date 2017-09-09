@@ -21,13 +21,20 @@
 <h3> Name: {{profile.name}}</h3>
 <h3> Email: {{profile.email}}</h3>
 <h3> Hometown: {{profile.hometown}}</h3>
-<h3> Total points: {{profile.score}} </h2>
+<h3 id="pts"> Total points: {{profile.score}} </h2>
 <br>
   <a href="/customize" class="buttoncust">Customize</a>
  <input type="button" onClick="history.go(0)" value="Refresh"
     class="button2">
 <br>
 </div>
+
+<script>
+
+var totalpts = localStorage.getItem("score");
+document.getElementById("pts").innerHTML="Total Points: " + totalpts.toString();
+
+</script>
 
   </body>
 </html>
