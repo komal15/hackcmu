@@ -52,6 +52,7 @@ function check() {
   }
   return points;
 }
+
 document.getElementById("submit").onclick=function() {
 var score= check();
 console.log(score);
