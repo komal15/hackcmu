@@ -93,6 +93,16 @@ class MyProfileHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/myprofile.html')
         self.response.write(template.render(template_vars))
 
+class GardenHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/garden.html')
+        self.response.out.write(template.render())
+
+class LeaderboardHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/leaderboard.html')
+        self.response.out.write(template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
@@ -100,5 +110,7 @@ app = webapp2.WSGIApplication([
     ('/profile', ProfileHandler),
     ('/questions', QuestionHandler),
     ('/myprofile', MyProfileHandler),
+    ('/mygarden', GardenHandler),
+    ('/leaderboard', LeaderboardHandler),
 
 ], debug=True)
