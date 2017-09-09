@@ -3,7 +3,7 @@ var ctx = c.getContext("2d");
 var totalpts = 100;
 var increm = 5;
 var cols = ["#7ABAF9","#C489FF","#DB7474","#E570E5","#FC80BE","#8686F9","#F7C42A", "#FC9328"];
-var fillcols = ["rgba(153, 204, 255, 0.5)","rgba(229, 204, 255, 0.5)","rgba(255, 153, 153, 0.5)","rgba(255, 153, 255, 0.5)","rgba(255, 153, 204, 0.5)","rgba(153, 153, 255, 0.5)","rgb(255, 217, 102)", "rgb(255, 179, 102)"]
+var fillcols = ["rgb(153, 204, 255)","rgb(229, 204, 255)","rgb(255, 153, 153)","rgb(255, 153, 255)","rgb(255, 153, 204)","rgb(153, 153, 255)","rgb(255, 217, 102)", "rgb(255, 179, 102)"]
 var width = window.innerWidth
 || document.documentElement.clientWidth
 || document.body.clientWidth;
@@ -14,6 +14,8 @@ var height = window.innerHeight
 ctx.canvas.width  = width;
   ctx.canvas.height= height;
 
+
+
 function grow(currentX, col, fillcol){
 function drawFlower(){
 
@@ -21,23 +23,15 @@ ctx.strokeStyle=col;
 ctx.lineWidth=1;
 ctx.fillStyle=fillcol;
 ctx.beginPath();
-<<<<<<< HEAD
-ctx.ellipse(currentX,0.60 *height, 20, 80,  Math.PI, 0, 2 * Math.PI);
-ctx.ellipse(currentX,0.60 *height, 20, 80,  Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(currentX,0.60 *height, 20, 80,  2 * Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(currentX,0.60 *height, 20, 80,  3 * Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(currentX,0.60 *height, 20, 80,  4 * Math.PI/5, 0, 2 * Math.PI)
-=======
 ctx.ellipse(currentX,0.60 *height, 0.01*width, 0.04*width,  Math.PI, 0, 2 * Math.PI);
 ctx.ellipse(currentX,0.60 *height,  0.01*width,  0.04*width,  Math.PI/5, 0, 2 * Math.PI)
 ctx.ellipse(currentX,0.60 *height,  0.01*width,  0.04*width,  2 * Math.PI/5, 0, 2 * Math.PI)
 ctx.ellipse(currentX,0.60 *height,  0.01*width,  0.04*width,  3 * Math.PI/5, 0, 2 * Math.PI)
 ctx.ellipse(currentX,0.60 *height,  0.01*width,  0.04*width,  4 * Math.PI/5, 0, 2 * Math.PI)
->>>>>>> 3f71d1dcea67f9a086a7381fe06e13a4707877d1
 ctx.fill();
 ctx.stroke();
 ctx.beginPath();
-ctx.arc(currentX,0.60 *height,20,0,2*Math.PI);
+ctx.arc(currentX,0.60 *height,0.01*width,0,2*Math.PI);
 ctx.fillStyle=col;
 ctx.fill();
 
@@ -57,11 +51,7 @@ function drawLine(x1,y1,x2,y2,ratio) {
 
 function animate(ratio) {
   ratio = ratio || 0;
-<<<<<<< HEAD
-  drawLine(currentX,0.88 *height,currentX,0.7*height,ratio);
-=======
-  drawLine(currentX,0.88*height,currentX,0.69*height,ratio);
->>>>>>> 3f71d1dcea67f9a086a7381fe06e13a4707877d1
+  drawLine(currentX,0.88*height,currentX,0.67*height,ratio);
 
 
   if(ratio<1) {
@@ -73,21 +63,14 @@ function animate(ratio) {
 
   drawFlower();
   ctx.beginPath();
+      ctx.strokeStyle="#0B8E3F";
     ctx.moveTo(currentX,0.85*height);
-<<<<<<< HEAD
-    ctx.bezierCurveTo(currentX-180, 0.75*height, currentX, 0.80 *height, currentX, 0.82* height);
-=======
     ctx.bezierCurveTo(currentX-0.08*width, 0.75*height, currentX, 0.80 *height, currentX, 0.82* height);
->>>>>>> 3f71d1dcea67f9a086a7381fe06e13a4707877d1
     ctx.stroke();
     ctx.fillStyle="#0B8E3F";
     ctx.fill();
     ctx.moveTo(currentX,0.85*height);
-<<<<<<< HEAD
-    ctx.bezierCurveTo(currentX, 0.8*height, currentX+100, 0.8*height, currentX + 30, 0.75*height);
-=======
     ctx.bezierCurveTo(currentX, 0.8*height, currentX+0.05*width, 0.8*height, currentX + 0.015*width, 0.75*height);
->>>>>>> 3f71d1dcea67f9a086a7381fe06e13a4707877d1
     ctx.stroke();
     ctx.fillStyle="#0B8E3F";
     ctx.fill();
@@ -97,7 +80,12 @@ animate();
 
 function garden(){
   for(var i=1;i<9;i++){
-grow(0.10*width * i,cols[i-1],fillcols[i-1]);
+    if(i%2==0){
+grow(0.10*width * i/2 ,cols[i-1],fillcols[i-1]);
+}
+else{
+  grow(0.10*width * i/2 ,cols[i-1],fillcols[i-1]);
+}
 }
 }
 garden();

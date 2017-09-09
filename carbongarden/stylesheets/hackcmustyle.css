@@ -50,9 +50,10 @@ a, a:visited{
     display: inline-block;
 		width:13.25%;
 		min-width: 80px;
-		margin-left:.5%;
 		margin-top:.25%;
 		margin-bottom: 1%;
+		margin-left:.5%;
+		margin-right:.1%;
     font-size: 14px;
 		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -75,6 +76,7 @@ a, a:visited{
 		min-width: 80px;
 		margin-top:.25%;
 		margin-bottom:1%;
+		margin-right:.1%;
     font-size: 14px;
 		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -97,6 +99,7 @@ a, a:visited{
 		min-width:80px;
 		margin-top:.25%;
 		margin-bottom:1%;
+		margin-right:.1%;
     font-size: 14px;
 		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -119,6 +122,7 @@ a, a:visited{
 		min-width:80px;
 		margin-top:.25%;
 		margin-bottom:1%;
+		margin-right:.1%;
     font-size: 14px;
 		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -141,6 +145,7 @@ a, a:visited{
 		min-width:80px;
 		margin-top:.25%;
 		margin-bottom:1%;
+		margin-right:.1%;
     font-size: 14px;
 		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -161,9 +166,9 @@ a, a:visited{
     display: inline-block;
 		width:13.25%;
 		min-width:80px;
-		margin-right:.5%;
 		margin-top:.25%;
 		margin-bottom:1%;
+		margin-right:.5%;
     font-size: 14px;
 		font-family: Copperplate, cursive;
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
