@@ -52,8 +52,8 @@ function check() {
   }
   return points;
 }
-
 document.getElementById("submit").onclick=function() {
 var score= check();
+localStorage.setItem("score",score);
 console.log(score);
 document.getElementById("score").innerHTML= "Score: "  + score.toString();}
