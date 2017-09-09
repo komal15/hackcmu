@@ -1,6 +1,8 @@
 import webapp2
 import jinja2
 import os
+#import PyV8
+
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
@@ -83,18 +85,10 @@ class QuestionHandler(webapp2.RequestHandler):
     def get(self):
         current_user = users.get_current_user()
         profile = Profile.query().filter(Profile.email == current_user.email()).get()
-
         current_email = current_user.email()
 
-        #current_user.score = 9 #SOSOSOSOOSOS
-        score = profile.score
-        #current_user.put()
-
-        #profile.score = 7
-        #profile.put()
-
         template_vars = {
-        'score' : score,
+
         'profile': profile,
         'current_email':current_email,
         }
@@ -121,6 +115,13 @@ class QuestionHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(template_vars))
 
         self.redirect('/')
+
+
+#class Global(PyV8.JSClass):
+#    pass
+
+#with PyV8.JSContext(Global()) as ctxt:
+#    totalpts = ctxt.eval("var totalpts = localStorage.getItem("score")");
 
 class MyProfileHandler(webapp2.RequestHandler):
     def get(self):
