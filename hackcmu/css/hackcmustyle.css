@@ -8,3 +8,11 @@ body{
     margin: 0;
     padding: 0;
 }
+.title{
+	font-size: 10em;
+	font-family: Snell Roundhand, cursive;
+	color: #0e7f28;
+	text-align: center;
+	background-color: #ffbcf4;
+	opacity: 0.9;
+}
