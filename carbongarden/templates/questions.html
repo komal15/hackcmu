@@ -35,6 +35,7 @@
         <input type="checkbox" name="resources" id="Used a reusable water bottle" value="Used a reusable water bottle" /><label for="Used a reusable water bottle">Used a reusable water bottle</label><br />
         <input type="checkbox" name="resources" id="Composted" value="Composted" /><label for="Composted">Composted</label><br />
         <input type="checkbox" name="resources" id="Recycled paper" value="Recycled paper" /><label for="Recycled paper">Recycled paper</label><br />
+        <input type="checkbox" name="resources" id="Recycled all bottles and cans" value="Recycled all bottles and cans" /><label for="Recycled all bottles and cans">Recycled all bottles and cans</label><br />
     </fieldset>
     <fieldset>
         <legend><b>How did you eat?</b></legend>
@@ -43,10 +44,10 @@
         <input type="checkbox" name="meal" id="Organic" value="Organic" /><label for="Organic">Organic</label><br />
         <input type="checkbox" name="meal" id="Reduced packaged meat consumption" value="Reduced packaged meat consumption" /><label for="Reduced packaged meat consumption">Reduced packaged meat consumption</label><br />
     </fieldset>
-      <button type="button" id= "submit">Submit</button>
+      <button type="button" id= "submit" method="post">Submit</button>
       <p id="score" class="questions"> Score:  </p>
 
-
+<h3> My total score: {{profile.score}} <h3>
       <!-- after pressing submit button, we can use JS to show the results of
       your number with a message like "Good job! You helped you garden grow
       today. or Keep working at it! With more efforts to reduce you carbon
