@@ -52,22 +52,14 @@ function check() {
   }
   return points;
 }
-<<<<<<< HEAD
-if(document.getElementById("submit")!=null){
-=======
-
->>>>>>> 702caf33b578f86a28d97f3a72a84ed9bddb167e
 document.getElementById("submit").onclick=function() {
 var score= check();
 localStorage.setItem("score",score);
 console.log(score);
 document.getElementById("score").innerHTML= "Score: "  + score.toString();}
-<<<<<<< HEAD
-}
-=======
+
 
 
 
 
 Read more: http://javarevisited.blogspot.com/2013/02/disable-submit-button-in-html-javascript-avoid-multiple-form-submission.html#ixzz4sCdnfZ3s
->>>>>>> 702caf33b578f86a28d97f3a72a84ed9bddb167e
