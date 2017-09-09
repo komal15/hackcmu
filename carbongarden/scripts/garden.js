@@ -21,15 +21,15 @@ ctx.strokeStyle=col;
 ctx.lineWidth=1;
 ctx.fillStyle=fillcol;
 ctx.beginPath();
-ctx.ellipse(currentX,500, 20, 80,  Math.PI, 0, 2 * Math.PI);
-ctx.ellipse(currentX,500, 20, 80,  Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(currentX,500, 20, 80,  2 * Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(currentX,500, 20, 80,  3 * Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(currentX,500, 20, 80,  4 * Math.PI/5, 0, 2 * Math.PI)
+ctx.ellipse(currentX,0.60 *height, 20, 80,  Math.PI, 0, 2 * Math.PI);
+ctx.ellipse(currentX,0.60 *height, 20, 80,  Math.PI/5, 0, 2 * Math.PI)
+ctx.ellipse(currentX,0.60 *height, 20, 80,  2 * Math.PI/5, 0, 2 * Math.PI)
+ctx.ellipse(currentX,0.60 *height, 20, 80,  3 * Math.PI/5, 0, 2 * Math.PI)
+ctx.ellipse(currentX,0.60 *height, 20, 80,  4 * Math.PI/5, 0, 2 * Math.PI)
 ctx.fill();
 ctx.stroke();
 ctx.beginPath();
-ctx.arc(currentX,500,20,0,2*Math.PI);
+ctx.arc(currentX,0.60 *height,20,0,2*Math.PI);
 ctx.fillStyle=col;
 ctx.fill();
 
@@ -49,7 +49,7 @@ function drawLine(x1,y1,x2,y2,ratio) {
 
 function animate(ratio) {
   ratio = ratio || 0;
-  drawLine(currentX,750,currentX,580,ratio);
+  drawLine(currentX,0.88 *height,currentX,0.7*height,ratio);
 
 
   if(ratio<1) {
@@ -61,13 +61,13 @@ function animate(ratio) {
 
   drawFlower();
   ctx.beginPath();
-    ctx.moveTo(currentX,700);
-    ctx.bezierCurveTo(currentX-180, 600, currentX, 650, currentX, 670);
+    ctx.moveTo(currentX,0.85*height);
+    ctx.bezierCurveTo(currentX-180, 0.75*height, currentX, 0.80 *height, currentX, 0.82* height);
     ctx.stroke();
     ctx.fillStyle="#0B8E3F";
     ctx.fill();
-    ctx.moveTo(currentX,700);
-    ctx.bezierCurveTo(currentX, 650, currentX+100, 650, currentX + 30, 600);
+    ctx.moveTo(currentX,0.85*height);
+    ctx.bezierCurveTo(currentX, 0.8*height, currentX+100, 0.8*height, currentX + 30, 0.75*height);
     ctx.stroke();
     ctx.fillStyle="#0B8E3F";
     ctx.fill();
