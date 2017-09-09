@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link href="../stylesheets/hackcmustyle.css" rel="stylesheet">
-    <title> {{profile.name}}'s Profile</title>
+    <title> Profile </title>
   </head>
   <body>
 <div class = "questions">
   <body style="margin:20px;padding:20px">
-    <button type="button" onclick="window.location.href='/'" style=margin-left:35%
+    <button type="button" onclick="window.location.href='/'" style=margin-left:33%
     >Home</button>
     <button type="button" onclick="window.location.href='/questions'"
     >Questions</button>
@@ -18,11 +18,15 @@
     >My Profile</button>
     <button type="button" onclick="window.location.href='/leaderboard'">
     Leaderboard</button>
-  <h1> <center> My Profile </center> </h1>
-
-<h4> Email: {{profile.email}}</h4>
+  <h1> <center> {{profile.name}}'s Profile </center> </h1>
+  <style>
+  h3 { text-indent: 20px; }
+  h2 { text-indent: 20px; }
+  </style>
+<h3> Email: {{profile.email}}</h3>
 <h2> Hometown: {{profile.hometown}}</h2>
-
+<h2> Total points: </h2>
+<br><br>
 </div>
 
   </body>
