@@ -24,11 +24,18 @@ body{
 	background-color: #ffbcf4;
 	opacity: 0.9;
 }
-.questions{
+.questions, .leaderboard{
 	font-size: 1em;
 	font-family: Copperplate, cursive;
 	color: #0e7f28;
 	text-align: left;
 	background-color: #ffbcf4;
 	opacity: 0.9;
+}
+
+a, a:visited{
+	text-decoration:none;
+}
+
+#getin{
 }

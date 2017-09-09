@@ -6,6 +6,17 @@
     <link href="../stylesheets/hackcmustyle.css" rel="stylesheet">
   </head>
   <body>
+    <body style="margin:20px;padding:20px">
+    <button type="button" onclick="window.location.href='/'" style=margin-left:35%
+    >Home</button>
+    <button type="button" onclick="window.location.href='/questions'"
+    >Questions</button>
+    <button type="button" onclick="window.location.href='/mygarden'"
+    >My Garden</button>
+    <button type="button" onclick="window.location.href='/myprofile'"
+    >My Profile</button>
+    <button type="button" onclick="window.location.href='/leaderboard'">
+    Leaderboard</button>
     <h1 class= "quest"> Were You Eco-Friendly?
     </h1>
     <div class= "questions">
@@ -38,6 +49,12 @@
         <input type="checkbox" name="meal" id="Reduced packaged meat consumption" value="Reduced packaged meat consumption" /><label for="Reduced packaged meat consumption">Reduced packaged meat consumption</label><br />
     </fieldset>
       <input type="submit" value="Submit">
+
+      <!-- after pressing submit button, we can use JS to show the results of
+      your number with a message like "Good job! You helped you garden grow 
+      today. or Keep working at it! With more efforts to reduce you carbon
+      footprint, the more your garden will grow"  -->
+
   </div>
   </body>
 <script>
