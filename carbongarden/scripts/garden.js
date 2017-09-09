@@ -4,7 +4,15 @@ var totalpts = 100;
 var increm = 5;
 var cols = ["#7ABAF9","#C489FF","#DB7474","#E570E5","#FC80BE","#8686F9","#F7C42A", "#FC9328"];
 var fillcols = ["rgba(153, 204, 255, 0.5)","rgba(229, 204, 255, 0.5)","rgba(255, 153, 153, 0.5)","rgba(255, 153, 255, 0.5)","rgba(255, 153, 204, 0.5)","rgba(153, 153, 255, 0.5)","rgb(255, 217, 102)", "rgb(255, 179, 102)"]
+var width = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
 
+var height = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+ctx.canvas.width  = width;
+  ctx.canvas.height= height;
 
 function grow(currentX, col, fillcol){
 function drawFlower(){
