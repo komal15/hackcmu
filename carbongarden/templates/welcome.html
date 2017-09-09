@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="../stylesheets/hackcmustyle.css" rel="stylesheet">
-    <title> Homepage </title>
+    <title> Carbon Garden </title>
   </head>
 
 {% if current_user %}
@@ -35,7 +35,7 @@
   </div>
 
 <button type="button"> <a id="getout" type="button" href="{{logout_url}}"> Log Out </a> </button>
-  <!-- <button id="getout" href="{{logout_url}}"> Log Out </a> -->
+
   </body>
 
 {% else %}
@@ -46,8 +46,9 @@
   </div>
 
   <div>
+    <button type="button"> <a id="getin" type="button" href="{{login_url}}"> Sign Up </a> </button>
     <button type="button"> <a id="getin" type="button" href="{{login_url}}"> Log In </a> </button>
-    <!-- <a id="getin" type="button" href="{{login_url}}"> Log In </a> -->
+
   </div>
   </body>
 {% endif %}
