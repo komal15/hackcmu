@@ -40,6 +40,28 @@ a, a:visited{
 #getin{
 }
 
+.buttonsub{
+	background-color: #e7e7e7; /* Gray */
+	border: none;
+	color: green;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width:10%;
+	min-width:50px;
+	margin-left:.5%;
+	font-size: 14px;
+	font-family: Copperplate, cursive;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.buttonsub:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
 .button1 {
     background-color: #e7e7e7; /* Gray */
     border: none;
