@@ -10,13 +10,14 @@
 
   <body>
     <div class = "questions">
-    <body style="margin:20px;padding:10px">
+    <body style="margin:20px;padding:20px">
     <a href="/" class = "button1">Home</a>
     <a href="/questions" class = "button2">Questions</a>
     <a href="/mygarden" class = "button3" >My Garden</a>
     <a href="/myprofile" class = "button4">My Profile</a>
     <a href="/leaderboard" class="button5">Leaderboard</a>
-    <u><h1> <center> Welcome to Carbon Garden! </center> </h1></u>
+    <a href="{{logout_url}}" id="getout" class ="button6">Log Out</a>  
+    <h1> <center> Welcome to Carbon Garden! </center> </h1>
     <h2> <center> Hello, {{profile.name}}! Thank you for logging in. Your participation in
     this game helps us achieve our goal of reducing the carbon footprint
     that will be left by our generation. </center> </h2>
@@ -26,9 +27,8 @@
     'My Profile' tab will show you your account information. The
     'Leaderboard' tab compares the number of green points you have to your
     friends. <br> Happy reducing, reusing, and recycling! </br> </center> </h3>
+    <br>
   </div>
-
-<button type="button"> <a id="getout" type="button" href="{{logout_url}}"> Log Out </a> </button>
 
   </body>
 
