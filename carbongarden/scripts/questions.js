@@ -29,7 +29,7 @@ function check() {
   }
 
   if( document.getElementById("Recycled all bottles and cans").check == true){
-
+    points+=1;
   }
 
   if( document.getElementById("Composted").checked == true){
