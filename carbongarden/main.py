@@ -72,7 +72,9 @@ class ProfileHandler(webapp2.RequestHandler):
 
 class WelcomeHandler(webapp2.RequestHandler):
     def get(self):
-        my_vars = {"name": "User"}
+        my_vars = {
+        "name": profile.name
+        }
         template = jinja_environment.get_template('templates/welcome.html')
         self.response.out.write(template.render(my_vars))
 

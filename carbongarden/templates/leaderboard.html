@@ -13,19 +13,21 @@
 <h2> Worldwide Leaderboard </h2>
 <table>
   <colgroup>
-    <col span="2" style="background-color:white">
+    <col span="3" style="background-color:white">
 
   </colgroup>
 
   <tr>
     <th>User</th>
     <th>Score</th>
+    <th>Location</th>
   </tr>
 
     {% for profile in profiles %}
   <tr>
     <td>{{profile.email}}</td>
     <td>{{profile.score}}</td>
+    <td>{{profile.hometown}}</td>
   </tr>
 
   {% endfor %}
