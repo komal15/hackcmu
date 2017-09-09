@@ -16,3 +16,19 @@ body{
 	background-color: #ffbcf4;
 	opacity: 0.9;
 }
+.quest{
+	font-size: 5em;
+	font-family: Copperplate, cursive;
+	color: #0e7f28;
+	text-align: center;
+	background-color: #ffbcf4;
+	opacity: 0.9;
+}
+.questions{
+	font-size: 1em;
+	font-family: Copperplate, cursive;
+	color: #0e7f28;
+	text-align: left;
+	background-color: #ffbcf4;
+	opacity: 0.9;
+}
