@@ -2,96 +2,11 @@
 <html>
 <head>
 <link href="../stylesheets/garden.css" rel="stylesheet">
-<script src="../js/p5.js"></script>
+
 </head>
-<canvas id="myCanvas" width ="1000" height = "1000">
+<canvas id="myCanvas" width ="2000" height = "1000">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
-<script>
-
-
-
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-
-
-function drawFlower(){
-ctx.strokeStyle="#7ABAF9";
-ctx.lineWidth=1;
-ctx.fillStyle="rgba(153, 204, 255, 0.5)";
-ctx.beginPath();
-ctx.ellipse(200,100, 20, 80,  Math.PI, 0, 2 * Math.PI);
-ctx.ellipse(200,100, 20, 80,  Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(200,100, 20, 80,  2 * Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(200,100, 20, 80,  3 * Math.PI/5, 0, 2 * Math.PI)
-ctx.ellipse(200,100, 20, 80,  4 * Math.PI/5, 0, 2 * Math.PI)
-ctx.fill();
-ctx.stroke();
-ctx.beginPath();
-ctx.arc(200,100,20,0,2*Math.PI);
-ctx.strokeStyle="#7ABAF9";
-ctx.lineWidth=1;
-ctx.fillStyle="#7ABAF9";
-ctx.fill();
-ctx.stroke();
-}
-
-function drawLine(x1,y1,x2,y2,ratio) {
-  ctx.strokeStyle="#0B8E3F";
-    ctx.lineWidth=10;
-  ctx.moveTo(x1,y1);
-  x2 = x1 + ratio * (x2-x1);
-  y2 = y1 + ratio * (y2-y1);
-  ctx.lineTo(x2,y2);
-
-  ctx.stroke();
-}
-
-function animate(ratio) {
-  ratio = ratio || 0;
-  drawLine(200,350,200,180,ratio);
-  if(ratio<1) {
-    requestAnimationFrame(function() {
-      animate(ratio + 0.01);
-    });
-    ctx.beginPath();
-    ctx.arc(200,100,20,0,2*Math.PI);
-    ctx.strokeStyle="#7ABAF9";
-    ctx.lineWidth=1;
-    ctx.fillStyle="#7ABAF9";
-    ctx.fill();
-    ctx.stroke();
-
-  }
-}
-window.setTimeout(function(){
-  drawFlower();
-  setTimeout(animate(), 1000); }, 1000);
-
-
-
-
-
-// ctx.fillStyle="rgba(229, 204, 255, 0.5)";//
-//ctx.strokeStyle="#C489FF";
-
-//ctx.fillStyle="rgba(255, 153, 153, 0.5)";
-//ctx.strokeStyle="#DB7474";
-
-//ctx.fillStyle="rgba(255, 153, 255, 0.5)";
-//ctx.strokeStyle="#E570E5";
-
-//ctx.fillStyle="rgba(255, 153, 204, 0.5)";
-//ctx.strokeStyle="#FC80BE";
-
-//ctx.fillStyle="rgba(153, 153, 255, 0.5)";
-//ctx.strokeStyle="#8686F9";
-
-//ctx.fillStyle="rgba(153, 204, 255, 0.5)";
-//ctx.strokeStyle="#7ABAF9";
-
-
-</script>
-
+<script src="../scripts/garden.js"></script>
 </body>
 </html>
