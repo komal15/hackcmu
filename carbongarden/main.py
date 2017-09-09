@@ -97,6 +97,7 @@ class QuestionHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(template_vars))
 
     def post(self):
+        print("works")
         current_user = users.get_current_user()
         profile = Profile.query().filter(Profile.email == current_user.email()).get()
         val = 7 #js.check()
