@@ -116,8 +116,9 @@ class GardenHandler(webapp2.RequestHandler):
 
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
-        profiles = Profile.query().order(-Profile.score).fetch()
+        profiles = Profile.query().order(-Profile.score).fetch(5)
 
+        #friend_profile = 
 
         template_vars = {
             'profiles': profiles,

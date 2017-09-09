@@ -54,6 +54,7 @@
       footprint, the more your garden will grow"  -->
   </div>
 <script>
+
   function check() {
     points=0;
     if( document.getElementById("Carpool").checked == true){
@@ -107,9 +108,13 @@
     return points;
   }
   document.getElementById("submit").onclick=function() {
-  var score= check();
-  console.log(score);
-document.getElementById("score").innerHTML= "Score: "  + score.toString();}
+    var score= check();
+    console.log(score);
+    document.getElementById("score").innerHTML= "Score: "  + score.toString();
+}
+
+
+
 </script>
 </body>
 </html>
