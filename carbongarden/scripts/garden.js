@@ -12,7 +12,7 @@ var height = window.innerHeight
 || document.documentElement.clientHeight
 || document.body.clientHeight;
 ctx.canvas.width  = width;
-  ctx.canvas.height= height;
+  ctx.canvas.height=height;
 
 
 
