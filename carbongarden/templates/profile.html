@@ -14,10 +14,12 @@
     <!-- <h3>Name: {{current_user}}</h3> -->
     <form action="/profile" method="post">
       <h3>Name </h3>
-      <input type="text" name="name" placeholder="Call me..." >
+      <input type="text" name="name" placeholder="Name" >
       <h3>Hometown </h3>
       <textarea  placeholder="Where are you from?" name="hometown" rows="8" cols="80"></textarea><br><br>
-      <input type="submit" >
+
+      <input type="submit" method="post">
+
     </form>
   </body>
 </html>
