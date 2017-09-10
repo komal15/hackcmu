@@ -14,19 +14,18 @@
     <a href="/myprofile" class = "button4">My Profile</a>
     <a href="/leaderboard" class="button5">Leaderboard</a>
     <a href="{{logout_url}}" id="getout" class ="button6">Log Out</a>
-  <h1 style = "font-size:4em"> <center>My Profile</center> </h1>
+  <h1 style= "font-size:3em"> <center>My Profile</center> </h1>
   <style>
   h3 { text-indent: 20px; }
   </style>
-<h3 style="font-size:2em"> Name: {{profile.name}}</h3>
-<h3 style="font-size:2em"> Email: {{profile.email}}</h3>
-<h3 style="font-size:2em"> Hometown: {{profile.hometown}}</h3>
-<h3 style="font-size:2em" id="pts"> Total points: {{profile.score}} </h2>
+<h3> Name: {{profile.name}}</h3>
+<h3 style=""> Email: {{profile.email}}</h3>
+<h3 style=""> Hometown: {{profile.hometown}}</h3>
+<h3 style="" id="pts"> Total points: {{profile.score}} </h2>
 <br>
-<a href="/customize" class="buttoncust">Customize</a>
-<FORM>
-<INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh" class="buttoncust">
-</FORM>
+  <a href="/customize" class="buttoncust">Customize</a>
+ <input type="button" onClick="history.go(0)" value="Refresh"
+    class="button2">
 <br>
 </div>
 

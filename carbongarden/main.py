@@ -86,9 +86,10 @@ class QuestionHandler(webapp2.RequestHandler):
         current_user = users.get_current_user()
         profile = Profile.query().filter(Profile.email == current_user.email()).get()
         current_email = current_user.email()
+        logout_url = users.create_logout_url('/')
 
         template_vars = {
-
+        "logout_url": logout_url,
         'profile': profile,
         'current_email':current_email,
         }
@@ -153,8 +154,10 @@ class GardenHandler(webapp2.RequestHandler):
 
 class LeaderboardHandler(webapp2.RequestHandler):
     def get(self):
-        profiles = Profile.query().order(-Profile.score).fetch(10)
+        profiles = Profile.query().order(-Profile.score).fetch(5)
+        logout_url = users.create_logout_url('/')
         template_vars = {
+            'logout_url':logout_url,
             'profiles': profiles,
         }
         template = jinja_environment.get_template('templates/leaderboard.html')
